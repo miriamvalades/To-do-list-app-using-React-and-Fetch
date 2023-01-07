@@ -66,7 +66,9 @@ const Home = () => {
 				))}
 			</ul>
 			<div className="todos-counter">
-  				{todos.length === 1 ? `${todos.length} task` : `${todos.length} tasks`}
+				{todos.length === 0 ? "No tasks!" : 
+				todos.length === 1 ? `${todos.length} task` : 
+				`${todos.length} tasks`}
 			</div>
 			<button className='btn btn-danger mt-3 border-0' onClick={() => setTodos(todos.filter((t, currentIndex) => {return t = 0 }))}>Clear</button>
 		</div>
